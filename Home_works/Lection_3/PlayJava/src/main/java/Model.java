@@ -37,12 +37,11 @@ public class Model {
     }
 
     public int rand(int min, int max){
-        return (int) (Math.random() * (max - min + 1) + min);
+    	 return (int) (Math.random() * (max - min - 2) + min + 1);
     }
 
     public int rand(){
-        return (int) (Math.random() * (DEFAULT_MAX_SECRET_NUMBER_VALUE - DEFAULT_MIN_SECRET_NUMBER_VALUE + 1)
-                + DEFAULT_MIN_SECRET_NUMBER_VALUE);
+        return rand(DEFAULT_MIN_SECRET_NUMBER_VALUE, DEFAULT_MAX_SECRET_NUMBER_VALUE);
     }
 
     public boolean setInput(int input) {
